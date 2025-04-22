@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+
+# VSCode or IDE
+.vscode/
+.idea/
+
+# Python
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+
+# Env
+.venv/
+.env/
+.uv/
