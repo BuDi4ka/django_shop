@@ -1,0 +1,18 @@
+[
+  {
+    "model": "products.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Cloth",
+      "description": "Description for cloth"
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Shoes",
+      "description": null
+    }
+  }
+]
