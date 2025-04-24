@@ -1,5 +1,7 @@
 from idlelib.debugobj_r import remote_object_tree_item
 
+from users.models import User
+
 from django.db import models
 
 # Create your models here.
@@ -21,5 +23,15 @@ class Product(models.Model):
 
     def __str__(self):
         return f'Product: {self.name}, category: {self.category}'
+
+
+class Basket(models.Model):
+     user = models.ForeignKey(to=User, on_delete=models.CASCADE)
+     product = models.ForeignKey(to=Product, on_delete=models.CASCADE)
+     quantity = models.PositiveSmallIntegerField(default=0)
+     created_timestamp = models.DateTimeField(auto_now_add=True)
+
+     def __str__(self):
+         return f'Корзина для {self.user.username} | {self.product.name}'
 
 
